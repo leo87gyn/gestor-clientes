@@ -1,0 +1,52 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Documenta\u00e7\u00e3o Gestor-Clientes",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/usuarios": {
+            "get": {
+                "tags": [
+                    "Usu\u00e1rios"
+                ],
+                "summary": "Retorna todos os usu\u00e1rios do sistema gestor",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Digita o token para autentica\u00e7\u00e3o",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retorna um array com usu\u00e1rios",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "id": {
+                                        "type": "int",
+                                        "example": 148
+                                    },
+                                    "nome": {
+                                        "type": "string",
+                                        "example": "Joaquim"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "joaquim@gmail.com"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
